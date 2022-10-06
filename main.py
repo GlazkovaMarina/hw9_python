@@ -25,3 +25,26 @@
 # biggest_dict(five=5)
 # print(biggest_dict(six=6, seven=7, eight=8))
 
+# # 5. Дана строка в виде случайной последовательности чисел от 0 до 9.
+# # Требуется создать словарь, который в качестве ключей будет принимать данные числа (т. е. ключи будут типом int),
+# #  а в качестве значений – количество этих чисел в имеющейся последовательности.
+# #  Для построения словаря создайте функцию count_it(sequence), принимающую строку из цифр.
+# #  Функция должна возвратить словарь из 3-х самых часто встречаемых чисел.
+
+# sequence = "123451232233"
+# def count_it(sequence):
+#     my_dict = {int(elem): sequence.count(elem) for elem in sequence}
+#     sorted_tuple = sorted(my_dict.items(), key=lambda item: item[1],reverse=True)
+#     sorted_dict = {key: value for key, value in sorted_tuple}
+#     i = 0
+#     res_dict = {}
+#     for key in sorted_dict:
+#         res_dict[key] = sorted_dict[key]
+#         i = i + 1
+#         if i == 3:
+#             break
+#     return res_dict
+
+# print(count_it(sequence))
+
+
